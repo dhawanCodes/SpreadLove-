@@ -45,6 +45,14 @@ nav {
     font-weight: bold;
 }
 
+/* Hamburger menu (mobile) */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
+
 .nav-links {
     list-style: none;
     display: flex;
@@ -406,3 +414,190 @@ button:hover {
     text-align: center;
 }
 
+@media (max-width: 768px) {
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 65px; /* below navbar */
+        left: 0;
+        width: 100%;
+        background: #ff4d6d;
+
+        flex-direction: column;
+        align-items: center;
+
+        display: none; /* hidden by default */
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .nav-links.show {
+        display: flex; /* shown when active */
+    }
+}   
+
+/* ============================= */
+/* 📱 Mobile Optimization */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+    /* Fix navbar overlap */
+    body {
+        padding-top: 70px;
+    }
+
+    nav {
+        padding: 12px 20px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    /* Content spacing */
+    .content {
+        padding: 40px 15px;
+        margin-top: 0;
+    }
+
+    .content h1 {
+        font-size: 28px;
+    }
+
+    .tagline {
+        font-size: 14px;
+    }
+
+    /* Gallery cards */
+    .card-container {
+        gap: 15px;
+    }
+
+    .card {
+        width: 90%;
+        max-width: 320px;
+    }
+
+    /* About page */
+    .about-section {
+        padding: 40px 15px;
+    }
+
+    .love-quote {
+        font-size: 18px;
+    }
+
+    .mission-section {
+        margin-top: 0;
+    }
+
+    .founder-section {
+        padding: 40px 20px;
+    }
+
+    /* Love Calculator */
+    .love-section {
+        padding: 40px 15px;
+    }
+
+    .calculator-box {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .calculator-box input,
+    .calculator-box button {
+        font-size: 16px;
+    }
+
+    /* Result page */
+    .result-section {
+        padding: 40px 15px;
+    }
+
+    .result-card {
+        width: 100%;
+        padding: 25px 20px;
+    }
+
+    .name-stack {
+        flex-direction: column;
+        gap: 5px;
+        margin-left: 0;
+    }
+
+    .result-actions button {
+        width: 100%;
+        margin: 8px 0;
+    }
+
+    footer {
+        font-size: 13px;
+        padding: 12px;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ============================= */
+/* 📱 Mobile Navbar Fix */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hamburger {
+        display: block;
+        font-size: 26px;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        background: #ff4d6d;
+
+        flex-direction: column;
+        align-items: center;
+
+        display: none;
+        padding: 15px 0;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 12px 0;
+    }
+
+    .nav-links li a {
+        font-size: 18px;
+        padding: 10px 0;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+body {
+    padding-top: 70px; /* space for fixed navbar */
+}

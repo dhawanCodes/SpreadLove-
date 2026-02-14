@@ -1,0 +1,443 @@
+/*spreadLove*/
+/* index page */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+
+    margin: 0;
+    font-family: Arial, sans-serif;
+    /* Background Image */
+    background-image: url("/images/bg.jpeg"); /* 👈 your image name */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    background: #ff4d6d;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 40px;
+    align-items: center;
+
+    position: fixed;   /* 👈 FIXED */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Hamburger menu (mobile) */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+}
+
+.content {
+    margin-top: 30px;   /* 👈 space for fixed navbar */
+    text-align: center;
+    padding: 60px 20px;
+}
+
+
+.content h1 {
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+.tagline {
+    font-style: italic;
+    margin: 10px 0 20px;
+}
+
+.cta-btn {
+    background: #ff4d6d;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.gallery {
+    padding: 20px;
+    text-align: center;
+    margin-top: -50px;
+}
+
+.card-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #ffe5ec;
+    width: 250px;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+footer {
+    background: #ff4d6d;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;   /* 👈 pushes footer to bottom */
+}
+
+
+/* about us page*/
+.about-section {
+    padding: 80px 20px;
+    text-align: center;
+    max-width: 900px;
+    margin: auto;
+}
+
+.love-quote {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: #ff4d6d;
+    margin: 25px 0;
+}
+
+.about-text {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.mission-section {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+    margin-top: -70px;
+}
+
+.mission-card {
+    background: #ffe5ec;
+    padding: 25px;
+    width: 280px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.founder-section {
+    padding: 60px 60px;
+    margin-top: -50px;
+    text-align: center;
+
+}
+
+.founder-card {
+    max-width: 400px;
+    margin: auto;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 20px;
+}
+
+.founder-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.insta-link {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #ff4d6d;
+    font-weight: bold;
+}
+
+.active {
+    text-decoration: underline;
+}
+
+/* loveCalculator page*/
+.opacity {
+    background-color: rgba(255, 255, 255, 0.36);
+    padding: 40px 10px;
+}
+
+
+.love-section {
+    padding: 80px 20px;
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+.love-desc {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.calculator-box {
+    background: #ffe5ec;
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 400px;
+    margin: 30px auto;
+}
+
+.calculator-box label {
+    display: block;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.calculator-box input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.calculator-box button {
+    margin-top: 20px;
+    background: #ff4d6d;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    width: 100%;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff4d6d;
+}
+
+.tips-section {
+    margin-top: 40px;
+}
+
+.rules-sectionCal {
+    margin-top: 40px;
+}
+
+.rules-list {
+    list-style: none;
+    padding: 0;
+}
+
+.rules-list li {
+    margin: 8px 0;
+}
+
+.disclaimer {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #070707;
+}
+
+
+/* result page */
+.result-section {
+    padding: 60px 20px;
+    text-align: center;
+    max-width: 900px;
+    margin: auto;
+}
+
+.result-intro {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.result-card {
+    background: #ffe5ec;
+    padding: 30px;
+    border-radius: 25px;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.name-stack {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 10px;
+    margin-left: -20px;
+    font-size: 18px;
+    font-weight: bold;
+    
+}
+
+.heart {
+    font-size: 22px;
+}
+
+.result-actions {
+    margin-top: 20px;
+}
+
+.result-actions button {
+    margin: 5px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+}
+
+.again {
+    background: #ff4d6d;
+    color: white;
+}
+
+.share {
+    background: #ff85a1;
+    color: white;
+}
+
+.result-note {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Animations */
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.25); }
+}
+
+@keyframes pop {
+    0% { transform: scale(0); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@media (max-width: 600px) {
+    .pop-text {
+        font-size: 30px;
+    }
+
+    .heart {
+        font-size: 70px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+button:hover {
+    opacity: 0.9;
+    transform: scale(1.02);
+    transition: 0.2s ease;
+}
+
+.nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.invite-section {
+    max-width: 400px;
+    margin: 60px auto;
+    background: #ffe5ec;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 65px; /* below navbar */
+        left: 0;
+        width: 100%;
+        background: #ff4d6d;
+
+        flex-direction: column;
+        align-items: center;
+
+        display: none; /* hidden by default */
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .nav-links.show {
+        display: flex; /* shown when active */
+    }
+}   

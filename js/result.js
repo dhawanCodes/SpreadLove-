@@ -149,3 +149,34 @@ Try it yourself on Spread Love 💕`;
         alert("Result copied! Share it with love 💕");
     }
 }
+
+function shareOnInstagram() {
+    const text = `💖 Love Result 💖
+${yourName} ❤️ ${partnerName}
+Compatibility: ${lovePercent}%
+
+Try it yourself on Spread Love 💕`;
+
+    // Copy result text
+    navigator.clipboard.writeText(text).then(() => {
+
+        // Try opening Instagram app (mobile)
+        const instagramApp = "instagram://app";
+        const instagramWeb = "https://www.instagram.com/";
+
+        // Mobile detection
+        if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+            window.location.href = instagramApp;
+
+            // Fallback to web after 1 sec
+            setTimeout(() => {
+                window.location.href = instagramWeb;
+            }, 1000);
+        } else {
+            // Desktop fallback
+            window.open(instagramWeb, "_blank");
+        }
+
+        alert("Result copied! Paste it in Instagram 💕");
+    });
+}
